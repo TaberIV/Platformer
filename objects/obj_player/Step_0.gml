@@ -94,11 +94,12 @@ if (tile_collision_check_hazards(tile_hazard_map_id))
 	player_kill();
 
 if (place_meeting(x, y, obj_flag) and !instance_exists(obj_coin)) {
-	velocity = [0, 0];
+	control = false;
 	
 	if (alarm[0] == -1)
 		alarm[0] = 20;
-}
+} else if (!control)
+	velocity = [0, max(0, velocity[1])];
 #endregion
 
 #region Move player
