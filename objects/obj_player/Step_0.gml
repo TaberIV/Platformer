@@ -4,21 +4,21 @@
 #region Horizontal momvement
 //Caps run speed
 if (sprintDown)
-	var max_velocity_x = sprintSpeed;
+	var max_velocityx = sprintSpeed;
 else
-	var max_velocity_x = runSpeed;
+	var max_velocityx = runSpeed;
 
 //Sets force to move player with
 var moveForce = ((grounded) ? (walkForce) : (walkForce * airMobility));
 
 //Set x velocity
-velocity_[0] = clamp(velocity_[0] + moveForce * dir, -max_velocity_x, max_velocity_x);
+velocity[0] = clamp(velocity[0] + moveForce * dir, -max_velocityx, max_velocityx);
 
 //Friction
-if (dir != sign(velocity_[0]) and grounded) {
-	velocity_[0] = lerp(velocity_[0], 0, friction_);
-	if (abs(velocity_[0]) < 1)
-		velocity_[0] = 0;
+if (dir != sign(velocity[0]) and grounded) {
+	velocity[0] = lerp(velocity[0], 0, friction_);
+	if (abs(velocity[0]) < 1)
+		velocity[0] = 0;
 }
 #endregion
 
@@ -32,7 +32,7 @@ grounded = mid_grounded || (tile_collision_inFloor(tile_collisions_map_id, bbox_
 
 
 if (grounded && jumpPressed) {
-	velocity_[1] = jumpSpeed;
+	velocity[1] = jumpSpeed;
 	mid_grounded = false;
 	
 	audio_play_sound(snd_jump, 1, false);
@@ -59,23 +59,23 @@ if (!grounded) {
 		wallRide = true;
 		
 		//Sets velocity
-		velocity_[0] = 0;
-		velocity_[1] = clamp(velocity_[1], -(TILE_SIZE - 1), ((move_input[1] <= 0) ? wallRideSpeed : wallRideSpeed * 2));
+		velocity[0] = 0;
+		velocity[1] = clamp(velocity[1], -(TILE_SIZE - 1), ((move_input[1] <= 0) ? wallRideSpeed : wallRideSpeed * 2));
 		
 		//Sets draw info
 		draw_dir = (on_right_wall) ? -1 : 1;
 		
 		#region Wall jump and unstick
 		if (jumpPressed) {
-			velocity_[0] = max_velocity_x * draw_dir;
-			velocity_[1] = jumpSpeed;
+			velocity[0] = max_velocityx * draw_dir;
+			velocity[1] = jumpSpeed;
 			unstickCounter = unstickTime;
 			audio_play_sound(snd_jump, 1, false);
 		}
 		else if (dir == draw_dir) {
 			unstickCounter--;
 			if (unstickCounter <= 0) {
-				velocity_[0] = draw_dir * walkSpeed;
+				velocity[0] = draw_dir * walkSpeed;
 				wallRide = false;
 				unstickCounter = unstickTime;
 			}
@@ -94,25 +94,23 @@ if (tile_collision_check_hazards(tile_hazard_map_id))
 	player_kill();
 
 if (place_meeting(x, y, obj_flag) and !instance_exists(obj_coin)) {
-	control = false;
+	velocity = [0, 0];
+	
 	if (alarm[0] == -1)
 		alarm[0] = 20;
-} else if (!control) {
-	velocity_[0] = 0;
-	velocity_[1] = clamp(velocity_[1], 0, TILE_SIZE);
 }
 #endregion
 
 #region Move player
 //Reapply floats
-velocity_[0] += velocity_floats[0];
-velocity_[1] += velocity_floats[1];
+velocity[0] += velocityfloats[0];
+velocity[1] += velocityfloats[1];
 
 //Floor speed and keep remaining float separate
-velocity_floats[0] = velocity_[0] - (floor(abs(velocity_[0]) * sign(velocity_[0])));
-velocity_floats[1] = velocity_[1] - (floor(abs(velocity_[1]) * sign(velocity_[1])));
-velocity_[0] -= velocity_floats[0];
-velocity_[1] -= velocity_floats[1];
+velocityfloats[0] = velocity[0] - (floor(abs(velocity[0]) * sign(velocity[0])));
+velocityfloats[1] = velocity[1] - (floor(abs(velocity[1]) * sign(velocity[1])));
+velocity[0] -= velocityfloats[0];
+velocity[1] -= velocityfloats[1];
 
-tile_collision_move(tile_collisions_map_id, velocity_);
+tile_collision_move(tile_collisions_map_id, velocity);
 #endregion
