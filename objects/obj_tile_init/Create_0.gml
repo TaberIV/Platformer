@@ -3,7 +3,8 @@
 
 tile_columns = sprite_get_width(spr_collision) / TILE_SIZE;
 tile_rows = sprite_get_height(spr_collision) / TILE_SIZE;
+tile_num = tile_columns * tile_rows;
 
-num_heights = (tile_columns * TILE_SIZE) * tile_rows;
-
-global.heights[num_heights - 1] = 0;
+// Stores how far from the top of the tile the 
+// highest pixel is in every pixel column
+global.heights[tile_num * TILE_SIZE] = 0;
