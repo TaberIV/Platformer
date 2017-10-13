@@ -1,0 +1,1 @@
+menu_goto_main();
