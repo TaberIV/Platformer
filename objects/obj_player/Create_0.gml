@@ -8,8 +8,8 @@ forwardPressed = 0;
 #region Movement
 control = true;
 
-velocity_ = [0, 0];
-velocity_floats = [0, 0];
+velocity = [0, 0];
+velocityfloats = [0, 0];
 
 #region Walking
 walkForce = 1;

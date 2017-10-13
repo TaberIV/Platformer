@@ -1,5 +1,5 @@
 ///@param tile_map_id
-///@param velocity__array
+///@param velocity_array
 var tile_map_id = argument0;
 var velocity = argument1;
 
