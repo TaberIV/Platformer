@@ -14,23 +14,24 @@ for (var row = 0; row < tile_rows; row++) {
 surface_reset_target();
 
 
-// Get heights from buffer
+// Get heights and bottoms from buffer
 buffer_get_surface(buff, surf, 0, 0, 0);
 
 for (var row = 0; row < tile_rows; row++) {
 	for (var check_x = 0; check_x < tile_columns * TILE_SIZE; check_x++) {
-		var count = 0;
-		for(var check_y = 0; check_y <= TILE_SIZE; check_y++) {
+		var yy = 0;
+		for(var check_y = 0; check_y < TILE_SIZE; check_y++) {
 			var pixel = buffer_peek(buff, (check_x + (check_y * tile_columns * TILE_SIZE) + (row * tile_columns * sqr(TILE_SIZE))) * 4, buffer_u32)
 			
 			if ((pixel & 0xff000000) != 0)
 				break;
 				
-			count++;
+			yy++;
 		}
-		
-		global.heights[check_x + (row * tile_columns * TILE_SIZE)] = count;
+		global.heights[check_x + (row * tile_columns * TILE_SIZE)] = yy;
 	}
 }
+
+show_debug_message(global.heights)
 
 room_goto_next();

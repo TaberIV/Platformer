@@ -7,4 +7,4 @@ tile_num = tile_columns * tile_rows;
 
 // Stores how far from the top of the tile the 
 // highest pixel is in every pixel column
-global.heights[tile_num * TILE_SIZE] = 0;
+global.heights[tile_num * TILE_SIZE - 1] = 0;

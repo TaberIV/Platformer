@@ -91,7 +91,7 @@ if (!grounded) {
 #endregion
 
 #region Collisions
-if (tile_collision_check_hazards(tile_hazard_map_id))
+if (tile_collision_check_touching(tile_hazard_map_id))
 	player_kill();
 
 if (place_meeting(x, y, obj_flag) and !instance_exists(obj_coin)) {
