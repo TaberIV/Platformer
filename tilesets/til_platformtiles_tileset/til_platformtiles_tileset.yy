@@ -11,8 +11,8 @@
         "SerialiseHeight": 1,
         "SerialiseWidth": 2,
         "TileSerialiseData": [
-            1,
-            2
+            0,
+            0
         ]
     },
     "out_columns": 7,
