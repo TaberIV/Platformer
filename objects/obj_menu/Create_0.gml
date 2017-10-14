@@ -4,35 +4,27 @@
 menu_rescale();
 menu_get_pause_overlay();
 
-//For picking menu options
+// For picking menu options
 selection = 0;
 menu_items = [];
 menu_actions = [];
 
-//Sets menu type
+#region Sets menu type
+// Common values
+screen_width = global.view_width;
+screen_height = global.view_height;
+screen_hcenter = screen_width / 2;
+screen_vcenter = screen_height / 2;
+
+// Sets menu type based on room
 if (room == rm_menu) {
 	pause = false;
 	
-	//Position information
-	space = 36;
-	
-	//Menu strings and functions
-	menu_title = "Platformer";
-	menu_items = ["Start Game", "Quit Game"];
-	menu_actions = [game_start, game_quit];
+	menu_set_main()
 }
 else {
 	pause = true;
 	
-	//Position information
-	space = 36;
-	title_x = global.view_width / 2;
-	title_y = global.view_width / 4;
-	
-	//Menu strings and functions
-	menu_title = "Pause";
-	menu_items = ["Resume", "Main Menu", "Quit Game"];
-	menu_actions = [game_unpause, menu_goto_main, game_quit];
+	menu_set_pause();
 }
-
-num_items = array_length_1d(menu_items);
+#endregion

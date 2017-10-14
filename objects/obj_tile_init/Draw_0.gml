@@ -32,6 +32,4 @@ for (var row = 0; row < tile_rows; row++) {
 	}
 }
 
-show_debug_message(global.heights)
-
 room_goto_next();
