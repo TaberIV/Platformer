@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "02b23a94-62b9-4d28-b301-688dd95ca190",
+            "Value": {
+                "id": "029f0940-7546-480a-8ab5-bf89ca370329",
+                "resourcePath": "scripts\\game_goto_level_test\\game_goto_level_test.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "06c98a20-8f00-4e6a-a8d2-c492d132998a",
             "Value": {
                 "id": "e98c9cc4-6f9c-43f4-b445-135517274a87",
@@ -1031,6 +1039,14 @@
             }
         },
         {
+            "Key": "e906efeb-bb04-4b8f-85e1-12d98467c2de",
+            "Value": {
+                "id": "f9252555-26b1-4e0f-a641-cdf0d885afb2",
+                "resourcePath": "scripts\\menu_set_lvlSelect\\menu_set_lvlSelect.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "e9fe1886-d49a-4bec-af04-24992748f31e",
             "Value": {
                 "id": "41e7a4e7-1fc0-4a56-8f4c-d22dd0b5b687",
@@ -1044,6 +1060,14 @@
                 "id": "840f3ad3-8c01-46fa-97d3-118fa91d805e",
                 "resourcePath": "views\\ecc9e523-4deb-4bbd-bd3e-e6ca62c55f65.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "edc2cca4-d3da-4d3a-9de5-1f8637e40b68",
+            "Value": {
+                "id": "939a9e52-e91d-4e84-b461-c8b1cb2b9fd5",
+                "resourcePath": "scripts\\game_goto_level_selection\\game_goto_level_selection.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1154,6 +1178,7 @@
         "8f2005c2-5603-42c6-8e0b-e4a2caf88bd8",
         "802e1dd5-7f0e-4385-9b7e-a69da53d26a8",
         "0cccb9cb-f74a-46e8-853e-94d332471a36",
+        "e906efeb-bb04-4b8f-85e1-12d98467c2de",
         "aff305bb-7c08-4982-a5e3-51d275a6ef9a",
         "7f89f125-3afa-460f-8531-0ededdab45df",
         "7586434c-313e-42bb-b205-f657c26b6a9f",
@@ -1163,6 +1188,8 @@
         "f7afc22f-098e-4458-97c5-7dcefb7aeb1e",
         "c128afd5-df0d-444d-b08a-7a3cf81e4191",
         "dd87b634-957c-4d9f-9278-b4835cb6f47f",
+        "edc2cca4-d3da-4d3a-9de5-1f8637e40b68",
+        "02b23a94-62b9-4d28-b301-688dd95ca190",
         "1e5e6e6b-7372-47cf-bb63-6bb40016cc1c",
         "7e4504b3-aab1-4374-9073-bcdb80349749",
         "fb15424d-3454-4fa0-b122-dc63d7682ceb",
