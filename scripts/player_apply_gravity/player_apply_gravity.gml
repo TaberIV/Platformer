@@ -8,6 +8,6 @@ else if (velocity[1] >= 0 or grounded or wallRide or (jumpDown and !fallGrav))
 
 //Adds gravity force
 if (!fallGrav)
-	velocity[1] += grav;
+	velocity[1] += grav * global.delta;
 else
-	velocity[1] += 3 * grav;
+	velocity[1] += 3 * grav * global.delta;

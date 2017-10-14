@@ -6,7 +6,7 @@ var velocity = argument1;
 var on_slope = tilemap_get_at_pixel(tile_map_id, x, bbox_bottom) > 1;
 
 //Move horizontally
-x += clamp(velocity[0], -(TILE_SIZE - 1), TILE_SIZE - 1);
+x += clamp(velocity[0] * global.delta, -(TILE_SIZE - 1), TILE_SIZE - 1);
 
 //Horizontal collisions
 var bbox_side = (velocity[0] > 0) ? bbox_right : bbox_left;
@@ -26,7 +26,7 @@ if (tile_collision_check_points(tile_map_id, side_top, side_middle, side_bottom)
 }
 
 //Move vertically
-y += clamp(velocity[1], -(TILE_SIZE - 1), TILE_SIZE - 1);
+y += clamp(velocity[1] * global.delta, -(TILE_SIZE - 1), TILE_SIZE - 1);
 
 //Vertical collisions
 if (tilemap_get_at_pixel(tile_map_id, x, bbox_bottom - 1) <= 1) {

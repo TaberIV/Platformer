@@ -9,14 +9,15 @@ else
 	var max_velocityx = runSpeed;
 
 //Sets force to move player with
-var moveForce = ((grounded) ? (walkForce) : (walkForce * airMobility));
+var moveForce = ((grounded) ? (walkForce) : (walkForce * airMobility)) * global.delta;
 
 //Set x velocity
 velocity[0] = clamp(velocity[0] + moveForce * dir, -max_velocityx, max_velocityx);
 
 //Friction
 if (dir != sign(velocity[0]) and grounded) {
-	velocity[0] = lerp(velocity[0], 0, friction_);
+	velocity[0] = lerp(velocity[0], 0, friction_ * global.delta);
+
 	if (abs(velocity[0]) < 1)
 		velocity[0] = 0;
 }
