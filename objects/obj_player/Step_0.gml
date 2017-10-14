@@ -27,16 +27,17 @@ player_apply_gravity();
 
 //Jumping
 mid_grounded = (tile_collision_inFloor(tile_collisions_map_id, x, bbox_bottom + 1) >= 0)
-grounded = mid_grounded || (tile_collision_inFloor(tile_collisions_map_id, bbox_left, bbox_bottom + 1) >= 0)
-						|| (tile_collision_inFloor(tile_collisions_map_id, bbox_right, bbox_bottom + 1) >= 0);
+grounded = (mid_grounded || tile_collision_check_points(tile_collisions_map_id, 
+														[bbox_left, bbox_bottom + 1],
+														[bbox_right, bbox_bottom + 1])) && velocity[1] >= 0;
 
 
 if (grounded && jumpPressed) {
-	velocity[1] = jumpSpeed;
-	mid_grounded = false;
-	
+	velocity[1] = jumpSpeed;	
 	audio_play_sound(snd_jump, 1, false);
 }
+if (velocity[1] < 0)
+	mid_grounded = false;
 #endregion
 
 #region Wall riding

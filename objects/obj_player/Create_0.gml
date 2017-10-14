@@ -12,7 +12,7 @@ velocity = [0, 0];
 velocityfloats = [0, 0];
 
 #region Walking
-walkForce = 1;
+walkForce = .75;
 friction_ = 0.2;
 walkSpeed = 3;
 runSpeed = 6;

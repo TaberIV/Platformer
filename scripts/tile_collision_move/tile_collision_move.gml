@@ -53,11 +53,13 @@ var floordist = tile_collision_inFloor(tile_collisions_map_id, x, bbox_bottom);
 while (floordist >= 0) {
 	y -= (floordist + 1);
 	floordist = tile_collision_inFloor(tile_collisions_map_id, x, bbox_bottom);
-	velocity[@ 1] = 0;
+	
+	if (velocity[1] > 0 or abs(floordist) >= abs(velocity[1]))
+		velocity[@ 1] = 0;
 }
 
 //Walk down slopes
-if (mid_grounded and floordist > -20) {
+if (mid_grounded and floordist > TILE_SIZE / -2) {
 	y += abs(floordist) - 1;
 	if ((bbox_bottom mod TILE_SIZE) == TILE_SIZE - 1) {
 		if (tilemap_get_at_pixel(tile_map_id, x, bbox_bottom + 1) > 1) {
