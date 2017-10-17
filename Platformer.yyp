@@ -87,6 +87,14 @@
             }
         },
         {
+            "Key": "0d85caa9-23a5-4207-8dc0-e333e008c7c6",
+            "Value": {
+                "id": "af16d6fd-dc6c-432b-a756-ab977fcb1cfc",
+                "resourcePath": "fonts\\fnt_win\\fnt_win.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "0eede0b8-1803-4ada-b5aa-2bf5884af18e",
             "Value": {
                 "id": "459ce71a-39ad-4436-9876-a4e51b5bfe77",
@@ -199,6 +207,14 @@
             }
         },
         {
+            "Key": "2d327ea9-7886-4ccd-8940-adaad5ae3a44",
+            "Value": {
+                "id": "3d514309-c4a1-452c-80e6-46e933c096a9",
+                "resourcePath": "scripts\\player_camera_create\\player_camera_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "2d87dff1-0965-40f6-988a-8c447e56b8a6",
             "Value": {
                 "id": "c0c449c0-3954-49b9-9764-d807a4f0eb4b",
@@ -243,6 +259,14 @@
             "Value": {
                 "id": "08a8b9a9-0a67-4dfe-b80d-21634c63b5c9",
                 "resourcePath": "scripts\\player_apply_gravity\\player_apply_gravity.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "3f23e2a7-55e6-4e65-aa3f-d9f146b747a9",
+            "Value": {
+                "id": "467d4596-a17e-4896-bbfe-f095b9da4b5a",
+                "resourcePath": "scripts\\player_create\\player_create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -895,6 +919,14 @@
             }
         },
         {
+            "Key": "c681b40c-dda8-4993-b105-35aa77e7c401",
+            "Value": {
+                "id": "d1331dfb-5c91-44da-92a0-cf8ede000764",
+                "resourcePath": "views\\c681b40c-dda8-4993-b105-35aa77e7c401.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "c85f382c-46c6-4ca2-89b0-3b58a3e1393d",
             "Value": {
                 "id": "d04414f3-10cb-400a-98c7-e0f4513c5d02",
@@ -1184,20 +1216,22 @@
         }
     ],
     "script_order": [
+        "3f23e2a7-55e6-4e65-aa3f-d9f146b747a9",
+        "0bec0d33-4ad7-449d-8658-c35db75b7b9c",
+        "39cbf348-0aee-4c64-9c9c-10f37046ba13",
         "cc83e163-5dcd-4862-9042-c1344a2a958e",
         "e4ffb1a2-7a3a-426b-a49f-46472024c79d",
         "40e29e94-dc71-4cac-9264-bf580162a31a",
-        "63ea2817-9c37-4430-bccf-c81e6454bbca",
-        "8ccf8064-7776-4b6a-b2d2-720a0e9b491e",
-        "07a32681-7416-47f5-a3bd-04f6048f7485",
-        "0bec0d33-4ad7-449d-8658-c35db75b7b9c",
-        "39cbf348-0aee-4c64-9c9c-10f37046ba13",
+        "2d327ea9-7886-4ccd-8940-adaad5ae3a44",
         "32692a77-da4c-4a0a-afc3-feab8cb8a502",
         "439e262b-2c0b-4916-aa56-492b9f3d6852",
         "95d3b79d-aac1-4086-ad2a-18cd08d218ef",
         "49776dfa-4e26-441e-a8b5-78c510973d89",
         "af1327e5-ee21-4dcd-b261-c1a0afea05b8",
         "81d4405e-28b6-4b61-ac96-0e1b18783732",
+        "63ea2817-9c37-4430-bccf-c81e6454bbca",
+        "8ccf8064-7776-4b6a-b2d2-720a0e9b491e",
+        "07a32681-7416-47f5-a3bd-04f6048f7485",
         "b607f9b1-0cdf-48bd-aefb-1ae554c38fda",
         "8f2005c2-5603-42c6-8e0b-e4a2caf88bd8",
         "802e1dd5-7f0e-4385-9b7e-a69da53d26a8",

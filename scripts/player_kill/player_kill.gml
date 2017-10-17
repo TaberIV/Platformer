@@ -1,4 +1,8 @@
-///@description Kills player and resets current room
+///@description Kills player and makes new instance at start of level
 
-room_restart();
 audio_play_sound(snd_die, 1, false);
+
+x = obj_player_spawn.x;
+y = obj_player_spawn.y;
+
+velocity = [0, 0];

@@ -1,8 +1,14 @@
-///@description Creates camera
+///@description Creates players and cameras
 play_room = instance_exists(obj_player_spawn);
 
 //If room is a level, creates a camera to follow player
 if (play_room) {
-	instance_create_depth(obj_player_spawn.x, obj_player_spawn.y, -10, obj_player);
-	instance_create_depth(obj_player_spawn.x, obj_player_spawn.y, -10, obj_camera);
+	global.winner = -1;
+	
+	//Creates players
+	global.players[global.num_players - 1] = 0;
+	for (var i = 0; i < global.num_players; i++) {
+		global.players[i] = player_create(i)
+		player_camera_create(i);
+	}
 }

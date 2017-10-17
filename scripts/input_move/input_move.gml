@@ -1,25 +1,26 @@
 /// @description Gets input for movement
 
 #region Gamepad stick
-move_input[0] = sign(gamepad_axis_value(0, gp_axislh));
-move_input[1] = sign(gamepad_axis_value(0, gp_axislv));
+move_input[0] = sign(gamepad_axis_value(playerNum, gp_axislh));
+move_input[1] = sign(gamepad_axis_value(playerNum, gp_axislv));
 #endregion
 
 #region If no stick input, then check dpad
 if (move_input[0] = 0 and move_input[1] = 0) {
-	if (gamepad_button_check(0, gp_padl))
+	if (gamepad_button_check(playerNum, gp_padl))
 		move_input[0] -= 1;
-	if (gamepad_button_check(0, gp_padr))
+	if (gamepad_button_check(playerNum, gp_padr))
 		move_input[0] += 1;
-	if (gamepad_button_check(0, gp_padu))
+	if (gamepad_button_check(playerNum, gp_padu))
 		move_input[1] -= 1;
-	if (gamepad_button_check(0, gp_padd))
+	if (gamepad_button_check(playerNum, gp_padd))
 		move_input[1] += 1;
 }
 #endregion
 
 #region If no gamepad input, then check keys
-if (move_input[0] = 0 and move_input[1] = 0) {
+
+if (playerNum == global.keyboardPlayer and move_input[0] = 0 and move_input[1] = 0) {
 	if (keyboard_check(vk_left) or keyboard_check(ord("A")))
 		move_input[0] -= 1;
 	if (keyboard_check(vk_right) or keyboard_check(ord("D")))

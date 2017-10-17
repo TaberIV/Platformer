@@ -1,4 +1,5 @@
 /// @description Set type of menu
+playerNum = 0;
 
 // Sets scale and creates resources
 menu_rescale();

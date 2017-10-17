@@ -1,4 +1,6 @@
 ///@description Draw self
+draw_color = global.draw_colors[playerNum] * 0.75;
+
 draw_sprite_ext(sprite_index, -1, x, y, draw_dir, image_yscale, 0, draw_color, 1);
 
 #region Draws hitbox

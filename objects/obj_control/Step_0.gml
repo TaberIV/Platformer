@@ -2,7 +2,7 @@
 
 // Creates menu object when paused
 if (input_pause_pressed() and play_room and !instance_exists(obj_menu)) {
-	instance_deactivate_all(true);
+	instance_deactivate_all(false);
 	instance_create_depth(0, 0, 0, obj_menu);
 }
 

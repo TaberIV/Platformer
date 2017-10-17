@@ -1,5 +1,6 @@
 ///@description Initialize constants
-count = 0;
+playerNum = -1;
+
 //Controls
 gamepad_set_axis_deadzone(0, 0.3);
 dir = 0;
