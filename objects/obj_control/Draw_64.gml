@@ -3,14 +3,21 @@
 //Draw view dividers
 if (play_room and global.num_players > 1) {
 	draw_set_color(c_black);
-	var line_width = 4;
-	//Outline
-	for (i = 0; i < line_width; i++) {
-		draw_rectangle(i, i, window_get_width() - i, window_get_height() - i, true);
+	var line_width = 3;
+	
+	//Outlines
+	for (var player = 0; player < global.num_players; player++) {
+		var x1 = (player % 2 == 0) ? -line_width : global.view_width;
+		var y1 = (floor(player / 2) == 0) ? -line_width : global.view_height;
+		var x2 = (player % 2 == 0) ? global.view_width : 2 * global.view_width + line_width;
+		var y2 = (floor(player / 2) == 0) ? global.view_height : 2 * global.view_height + line_width;
+		
+		draw_set_color(c_black);
+		
+		for (var i = 0; i < line_width; i++) {
+			draw_rectangle(x1 + i, y1 + i, x2 - i, y2 - i, true);
+		}
 	}
-	// Crosses
-	draw_rectangle((window_get_width() - line_width) / 2, 0, (window_get_width() + line_width) / 2, window_get_height(), false)
-	draw_rectangle(0, (window_get_height() - line_width) / 2, window_get_width(), (window_get_height() + line_width) / 2, false)
 }
 
 // Draw win text
