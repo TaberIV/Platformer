@@ -1,6 +1,6 @@
 /// @description Move camera
 //Lerps camera toward target
-var lerp_val = .25;
+var lerp_val = .15;
 var target_x = target.x;
 var target_y = target.y;
 

@@ -1,6 +1,6 @@
 /// @description Steps back to previous menu
 
-if (pause)
+if (global.pause)
 	menu_set_pause();
 else
 	menu_set_main();

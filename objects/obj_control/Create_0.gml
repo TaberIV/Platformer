@@ -6,6 +6,7 @@ global.view_height = 540;
 global.font = "Fonts/Helvetica-Regular.ttf";
 
 play_room = false;
+global.pause = false;
 
 global.num_players = 4;
 global.draw_colors = [c_red, c_blue, c_yellow, c_green];

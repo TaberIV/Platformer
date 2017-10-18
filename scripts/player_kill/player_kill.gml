@@ -2,7 +2,13 @@
 
 audio_play_sound(snd_die, 1, false);
 
-x = obj_player_spawn.x;
-y = obj_player_spawn.y;
+// Reset values
+x = xstart;
+y = ystart;
 
 velocity = [0, 0];
+
+draw_dir = 1;
+
+if (instance_exists(obj_coin))
+	obj_coin.collected[playerNum] = false;

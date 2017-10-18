@@ -6,9 +6,7 @@ var playerNum = argument0;
 var camera = instance_create_depth(obj_player_spawn.x, obj_player_spawn.y, -50, obj_camera);
 camera.playerNum = playerNum;
 with (camera) {	
-	//Enble views
-	view_enabled = true;
-
+	// Setup view
 	view_set_visible(playerNum, true);
 	view_set_wport(playerNum, global.view_width);
 	view_set_hport(playerNum, global.view_height);

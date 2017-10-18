@@ -94,7 +94,7 @@ if (!grounded) {
 if (tile_collision_check_touching(tile_hazard_map_id))
 	player_kill();
 
-if (place_meeting(x, y, obj_flag) and !instance_exists(obj_coin)) {
+if (place_meeting(x, y, obj_flag) and (!instance_exists(obj_coin) or obj_coin.collected[playerNum])) {
 	if (global.winner == -1)
 		global.winner = playerNum;
 	control = false;
