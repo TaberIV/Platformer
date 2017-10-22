@@ -1,7 +1,6 @@
 ///@description Creates players and cameras
 play_room = instance_exists(obj_player_spawn);
 view_enabled = play_room;
-show_debug_message(play_room)
 
 //If room is a level, creates a camera to follow player
 if (play_room) {

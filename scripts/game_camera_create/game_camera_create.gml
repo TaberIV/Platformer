@@ -14,15 +14,18 @@ with (camera) {
 	view_set_visible(port, true);
 	
 	#region Sets view dimensions
-	var width = global.view_width;;
-	var height =  global.view_height;;
+	var width = global.view_width;
+	var height =  global.view_height;
 	var xx = global.view_width * (port % 2);
 	var yy = global.view_height * floor(port / 2);
 	
-	if (global.num_players == 2) {
-		// Horizontal split screen
-		if (room_width / global.view_width > room_height / global.view_height) {
-			split_screen = HORIZONTAL;
+	// No split screen
+	if (room_width == global.view_width and room_height == global.view_height)
+		split_screen = NONE;
+	else if (global.num_players == 2) {
+		// Vertical split screen
+		if (room_width / global.view_width < room_height / global.view_height) {
+			split_screen = VERTICAL;
 			
 			width = global.view_width;
 			height = global.view_height * 2;
@@ -30,15 +33,16 @@ with (camera) {
 			xx = global.view_width * (port % 2);
 			yy = 0;
 		}
-		// Vertical split screen
+		// Horizontal split screen
 		else {
-			split_screen = VERTICAL;
+			split_screen = HORIZONTAL;
+			show_debug_message(split_screen)
 			
-			view_set_wport(port, global.view_width * 2);
-			view_set_hport(port, global.view_height);
+			width = global.view_width * 2;
+			height = global.view_height;
 			
 			xx = 0;
-			yy = global.view_height * floor(port / 2)
+			yy = global.view_height * (port % 2);
 		}
 	} else
 		split_screen = QUADRANT;
@@ -50,8 +54,8 @@ with (camera) {
 	#endregion
 	
 	//Camera creation
-	camera = camera_create_view(target.x, target.y, global.view_width, global.view_height, 
-								0, id, -1, -1, global.view_width / 2, global.view_height / 2);
+	camera = camera_create_view(target.x, target.y, width, height, 
+								0, id, -1, -1, width / 2, height / 2);
 	view_camera[port] = camera;
 }
 

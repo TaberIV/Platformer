@@ -1,23 +1,19 @@
 ///@description Draws debug messages
 
 #region Draw view dividers
-/*
 if (play_room and !global.pause and global.num_players > 1) {
 	draw_set_color(c_black);
 	var line_width = 3;
 	
-	for (var player = 0; player < global.num_players; player++) {
-		var x1 = (player % 2 == 0) ? -line_width : global.view_width;
-		var y1 = (floor(player / 2) == 0) ? -line_width : global.view_height;
-		var x2 = (player % 2 == 0) ? global.view_width : 2 * global.view_width + line_width;
-		var y2 = (floor(player / 2) == 0) ? global.view_height : 2 * global.view_height + line_width;
-		
-		for (var i = 0; i < line_width; i++) {
-			draw_rectangle(x1 + i, y1 + i, x2 - i, y2 - i, true);
-		}
+	if (split_screen == QUADRANT or split_screen == VERTICAL) {
+		for (var i = 0; i < line_width; i++)
+			draw_line(window_width / 2, 0, window_width / 2, window_height);
+	}
+	if (split_screen == QUADRANT or split_screen == HORIZONTAL) {
+		for (var i = 0; i < line_width; i++)
+			draw_line(0, window_height / 2, window_width, window_height / 2);
 	}
 }
-*/
 #endregion
 
 #region Draw win text
