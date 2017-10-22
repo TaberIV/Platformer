@@ -1,6 +1,7 @@
 ///@description Draws debug messages
 
 #region Draw view dividers
+/*
 if (play_room and !global.pause and global.num_players > 1) {
 	draw_set_color(c_black);
 	var line_width = 3;
@@ -16,6 +17,7 @@ if (play_room and !global.pause and global.num_players > 1) {
 		}
 	}
 }
+*/
 #endregion
 
 #region Draw win text

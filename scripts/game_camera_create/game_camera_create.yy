@@ -1,8 +1,8 @@
 {
-    "id": "2d327ea9-7886-4ccd-8940-adaad5ae3a44",
+    "id": "8ad04b5d-7d83-4c1a-aef7-8eb0a8e2571b",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "player_camera_create",
+    "name": "game_camera_create",
     "IsCompatibility": false,
     "IsDnD": false
 }

@@ -10,7 +10,9 @@ if (play_room) {
 	//Creates players
 	global.players[global.num_players - 1] = 0;
 	for (var i = 0; i < global.num_players; i++) {
-		global.players[i] = player_create(i)
-		player_camera_create(i);
+		global.players[i] = player_create(i);
+		
+		if (room_width > global.view_width or room_height > global.view_height or i == 0)
+			game_camera_create(i, global.players[i]);
 	}
 }

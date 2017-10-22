@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "0e0105f9-84d7-47a5-8e37-1e6c9b8d936b",
+            "Value": {
+                "id": "13e998ef-597c-4a8b-80db-53575e5970fc",
+                "resourcePath": "views\\0e0105f9-84d7-47a5-8e37-1e6c9b8d936b.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "0eede0b8-1803-4ada-b5aa-2bf5884af18e",
             "Value": {
                 "id": "459ce71a-39ad-4436-9876-a4e51b5bfe77",
@@ -587,6 +595,14 @@
             "Value": {
                 "id": "31d72854-f776-4abf-9f93-446a84c93370",
                 "resourcePath": "scripts\\tile_collision_move\\tile_collision_move.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "8ad04b5d-7d83-4c1a-aef7-8eb0a8e2571b",
+            "Value": {
+                "id": "b515e4ae-e0b7-4d4f-9cb9-a3cda81fb6d2",
+                "resourcePath": "scripts\\game_camera_create\\game_camera_create.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1222,7 +1238,6 @@
         "cc83e163-5dcd-4862-9042-c1344a2a958e",
         "e4ffb1a2-7a3a-426b-a49f-46472024c79d",
         "40e29e94-dc71-4cac-9264-bf580162a31a",
-        "2d327ea9-7886-4ccd-8940-adaad5ae3a44",
         "32692a77-da4c-4a0a-afc3-feab8cb8a502",
         "439e262b-2c0b-4916-aa56-492b9f3d6852",
         "95d3b79d-aac1-4086-ad2a-18cd08d218ef",
@@ -1252,7 +1267,8 @@
         "7e4504b3-aab1-4374-9073-bcdb80349749",
         "fb15424d-3454-4fa0-b122-dc63d7682ceb",
         "743bed6b-e2a8-46e5-beb9-aa7a57b3c892",
-        "68b22332-1e70-4465-8e4e-40a663021f98"
+        "68b22332-1e70-4465-8e4e-40a663021f98",
+        "8ad04b5d-7d83-4c1a-aef7-8eb0a8e2571b"
     ],
     "tutorial": ""
 }
