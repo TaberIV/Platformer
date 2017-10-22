@@ -21,11 +21,11 @@ with (camera) {
 	
 	// No split screen
 	if (room_width == global.view_width and room_height == global.view_height)
-		split_screen = NONE;
+		global.split_screen = NONE;
 	else if (global.num_players == 2) {
 		// Vertical split screen
 		if (room_width / global.view_width < room_height / global.view_height) {
-			split_screen = VERTICAL;
+			global.split_screen = VERTICAL;
 			
 			width = global.view_width;
 			height = global.view_height * 2;
@@ -35,8 +35,7 @@ with (camera) {
 		}
 		// Horizontal split screen
 		else {
-			split_screen = HORIZONTAL;
-			show_debug_message(split_screen)
+			global.split_screen = HORIZONTAL;
 			
 			width = global.view_width * 2;
 			height = global.view_height;
@@ -45,7 +44,7 @@ with (camera) {
 			yy = global.view_height * (port % 2);
 		}
 	} else
-		split_screen = QUADRANT;
+		global.split_screen = QUADRANT;
 	
 	view_set_wport(port, width);
 	view_set_hport(port, height);

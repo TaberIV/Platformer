@@ -7,7 +7,7 @@ play_room = false;
 global.pause = false;
 
 // Player Control
-global.num_players = 2;
+global.num_players = 3;
 global.draw_colors = [c_red, c_blue, c_yellow, c_green];
 global.keyboardPlayer = 1;
 global.winner = -1;
@@ -19,7 +19,7 @@ global.view_height = 540;
 #macro HORIZONTAL 1
 #macro VERTICAL 2
 #macro QUADRANT 3
-split_screen = NONE;
+global.split_screen = NONE;
 
 // Style info
 global.font = "Fonts/Helvetica-Regular.ttf";

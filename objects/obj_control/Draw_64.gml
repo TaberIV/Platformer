@@ -5,13 +5,14 @@ if (play_room and !global.pause and global.num_players > 1) {
 	draw_set_color(c_black);
 	var line_width = 3;
 	
-	if (split_screen == QUADRANT or split_screen == VERTICAL) {
+	show_debug_message(global.split_screen)
+	if (global.split_screen == QUADRANT or global.split_screen == VERTICAL) {
 		for (var i = 0; i < line_width; i++)
-			draw_line(window_width / 2, 0, window_width / 2, window_height);
+			draw_line(window_get_width() / 2, 0, window_get_width() / 2, window_get_height());
 	}
-	if (split_screen == QUADRANT or split_screen == HORIZONTAL) {
+	if (global.split_screen == QUADRANT or global.split_screen == HORIZONTAL) {
 		for (var i = 0; i < line_width; i++)
-			draw_line(0, window_height / 2, window_width, window_height / 2);
+			draw_line(0, window_get_height() / 2, window_get_width(), window_get_height() / 2);
 	}
 }
 #endregion
