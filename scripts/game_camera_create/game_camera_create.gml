@@ -14,37 +14,35 @@ with (camera) {
 	view_set_visible(port, true);
 	
 	#region Sets view dimensions
-	var width = global.view_width;
-	var height =  global.view_height;
-	var xx = global.view_width * (port % 2);
-	var yy = global.view_height * floor(port / 2);
+	var width;
+	var height;
+	var xx;
+	var yy;
 	
-	// No split screen
-	if (room_width == global.view_width and room_height == global.view_height)
-		global.split_screen = NONE;
-	else if (global.num_players == 2) {
-		// Vertical split screen
-		if (room_width / global.view_width < room_height / global.view_height) {
-			global.split_screen = VERTICAL;
-			
+	switch (global.split_screen) {
+		case NONE:
+		case QUADRANT:
+			width = global.view_width;
+			height =  global.view_height;
+			xx = global.view_width * (port % 2);
+			yy = global.view_height * floor(port / 2);
+			break;
+		case VERTICAL:
 			width = global.view_width;
 			height = global.view_height * 2;
 			
 			xx = global.view_width * (port % 2);
 			yy = 0;
-		}
-		// Horizontal split screen
-		else {
-			global.split_screen = HORIZONTAL;
+			break;
+		case HORIZONTAL:
 			
 			width = global.view_width * 2;
 			height = global.view_height;
 			
 			xx = 0;
 			yy = global.view_height * (port % 2);
-		}
-	} else
-		global.split_screen = QUADRANT;
+			break;
+	}
 	
 	view_set_wport(port, width);
 	view_set_hport(port, height);
