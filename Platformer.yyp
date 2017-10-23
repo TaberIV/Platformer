@@ -706,7 +706,7 @@
             "Key": "928da7c7-4767-4410-b32c-593649ef3d17",
             "Value": {
                 "id": "b0db7302-2cae-43c5-b28b-b2ef9c0ab903",
-                "resourcePath": "rooms\\rm_tile_init\\rm_tile_init.yy",
+                "resourcePath": "rooms\\rm_init\\rm_init.yy",
                 "resourceType": "GMRoom"
             }
         },

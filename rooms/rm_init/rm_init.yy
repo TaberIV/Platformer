@@ -1,6 +1,6 @@
 
 {
-    "name": "rm_tile_init",
+    "name": "rm_init",
     "id": "928da7c7-4767-4410-b32c-593649ef3d17",
     "creationCodeFile": "",
     "inheritCode": false,
