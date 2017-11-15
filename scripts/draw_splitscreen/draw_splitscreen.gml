@@ -19,15 +19,26 @@ if (global.num_players > 1) {
 	#endregion
 	
 	#region Window labels
-	if ((global.split_screen == QUADRANT or global.split_screen == VERTICAL)) {
+	
+	draw_set_halign(fa_left);
+	draw_set_valign(fa_top);
+	draw_set_font(obj_control.fnt_player_labels);
+	
+	var text_offset = 35;
+	
+	if (global.split_screen != NONE) {
 		for (var i = 0; i < global.num_players; i++) {
-			draw_set_halign(fa_left);
-			draw_set_valign(fa_top);
-			
 			draw_set_color(global.draw_colors[i]);
-			draw_set_font(obj_control.fnt_player_labels)
-			
-			draw_text(global.view_width * (i % 2) + 15, global.view_height * floor(i / 2) + 15, "P" + string(i + 1));
+		
+			if ((global.split_screen == QUADRANT or global.split_screen == VERTICAL)) {
+				var text_x = global.view_width * (i % 2) + text_offset;
+				var text_y = global.view_height * floor(i / 2) + text_offset;
+			} else if (global.split_screen == HORIZONTAL) {
+				var text_x = text_offset;
+				var text_y = global.view_height * (i % 2) + text_offset;
+			}
+		
+			draw_text(text_x, text_y, "P" + string(i + 1));
 		}
 	}
 	#endregion
