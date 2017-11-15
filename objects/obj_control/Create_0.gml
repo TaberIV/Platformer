@@ -7,9 +7,9 @@ play_room = false;
 global.pause = false;
 
 // Player Control
-global.num_players = 2;
+global.num_players = 3;
 global.draw_colors = [c_red, c_blue, c_yellow, c_green];
-global.keyboardPlayer = 1;
+global.keyboardPlayer = global.num_players - 1;
 global.winner = -1;
 
 // View info
@@ -25,3 +25,4 @@ global.split_screen = NONE;
 global.font = "Fonts/Helvetica-Regular.ttf";
 scale = 1;
 fnt_win = font_add(global.font, 36 * scale, false, false, 32, 128);
+fnt_player_labels = font_add(global.font, 24 * scale, false, false, 32, 128);

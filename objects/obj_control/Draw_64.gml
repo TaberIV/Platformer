@@ -3,14 +3,16 @@
 if (scale != window_get_width() / global.view_width) {
 	scale = window_get_width() / global.view_width;
 	font_delete(fnt_win);
+	font_delete(fnt_player_labels);
 	fnt_win = font_add(global.font, 36 * scale, false, false, 32, 128);
+	fnt_player_labels = font_add(global.font, 24 * scale, false, false, 32, 128);
 }
 
 if (play_room and !global.pause)
 	draw_splitscreen();
 
 #region Draw win text
-if (play_room and global.winner != -1) {
+if (play_room and !global.pause and global.winner != -1) {
 	var str = "Player " + string(global.winner + 1) + " wins!";
 	
 	draw_set_font(fnt_win);
