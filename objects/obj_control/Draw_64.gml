@@ -1,5 +1,10 @@
 ///@description Draws debug messages
 
+if (scale != window_get_width() / global.view_width) {
+	scale = window_get_width() / global.view_width;
+	fnt_win = font_add(global.font, 36 * scale, false, false, 32, 128);
+}
+
 if (play_room and !global.pause)
 	draw_splitscreen();
 

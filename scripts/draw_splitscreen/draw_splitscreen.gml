@@ -2,7 +2,7 @@
 
 if (global.num_players > 1) {
 	draw_set_color(c_black);
-	var line_width = 3;
+	var line_width = 3 * scale;
 	
 	if (global.split_screen == QUADRANT or global.split_screen == VERTICAL) {
 		for (var i = 0; i < line_width; i++)

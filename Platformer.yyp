@@ -95,14 +95,6 @@
             }
         },
         {
-            "Key": "0d85caa9-23a5-4207-8dc0-e333e008c7c6",
-            "Value": {
-                "id": "af16d6fd-dc6c-432b-a756-ab977fcb1cfc",
-                "resourcePath": "fonts\\fnt_win\\fnt_win.yy",
-                "resourceType": "GMFont"
-            }
-        },
-        {
             "Key": "0e0105f9-84d7-47a5-8e37-1e6c9b8d936b",
             "Value": {
                 "id": "13e998ef-597c-4a8b-80db-53575e5970fc",
@@ -314,7 +306,7 @@
             "Key": "435be6b3-88e3-4091-b505-c4b095faad45",
             "Value": {
                 "id": "b15c54d4-bf9e-49c7-84a8-35054a83c562",
-                "resourcePath": "rooms\\rm_level4\\rm_level4.yy",
+                "resourcePath": "rooms\\rm_level3\\rm_level3.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -1034,7 +1026,7 @@
             "Key": "cc7542da-c3d8-4391-a94f-755640433c25",
             "Value": {
                 "id": "595df029-1762-4342-89ca-ec511554275a",
-                "resourcePath": "rooms\\rm_level3\\rm_level3.yy",
+                "resourcePath": "rooms\\rm_level4\\rm_level4.yy",
                 "resourceType": "GMRoom"
             }
         },

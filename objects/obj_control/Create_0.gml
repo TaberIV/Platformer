@@ -23,4 +23,4 @@ global.split_screen = NONE;
 
 // Style info
 global.font = "Fonts/Helvetica-Regular.ttf";
-
+scale = -1;
