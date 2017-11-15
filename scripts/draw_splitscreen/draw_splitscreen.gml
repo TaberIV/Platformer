@@ -24,12 +24,10 @@ if (global.num_players > 1) {
 	draw_set_valign(fa_top);
 	draw_set_font(obj_control.fnt_player_labels);
 	
-	var text_offset = 35;
+	var text_offset = 16;
 	
 	if (global.split_screen != NONE) {
 		for (var i = 0; i < global.num_players; i++) {
-			draw_set_color(global.draw_colors[i]);
-		
 			if ((global.split_screen == QUADRANT or global.split_screen == VERTICAL)) {
 				var text_x = global.view_width * (i % 2) + text_offset;
 				var text_y = global.view_height * floor(i / 2) + text_offset;
@@ -37,7 +35,8 @@ if (global.num_players > 1) {
 				var text_x = text_offset;
 				var text_y = global.view_height * (i % 2) + text_offset;
 			}
-		
+			
+			draw_set_color(global.draw_colors[i]);
 			draw_text(text_x, text_y, "P" + string(i + 1));
 		}
 	}

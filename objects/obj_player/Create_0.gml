@@ -31,14 +31,14 @@ jumpSpeed = -2 * jumpHeight * sprintSpeed / (jumpWidth / 2);
 grav = 2 * jumpHeight * sqr(sprintSpeed) / sqr(jumpWidth / 2);
 fallGrav = false;
 
-doubleJump = false;
+doubleJump = true;
 doubleJumpCharge = doubleJump;
 doubleJumpSpeed = jumpSpeed * 0.75;
 #endregion
 
 #region Wall ride
 wallRideSpeed = 5;
-unstickTime = 5;
+unstickTime = 10;
 unstickCounter = unstickTime;
 #endregion
 #endregion

@@ -7,7 +7,7 @@ play_room = false;
 global.pause = false;
 
 // Player Control
-global.num_players = 2;
+global.num_players = 4;
 global.draw_colors = [c_red, c_blue, c_yellow, c_green];
 global.keyboardPlayer = global.num_players - 1;
 global.winner = -1;
