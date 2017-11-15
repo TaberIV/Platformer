@@ -2,6 +2,7 @@
 
 if (scale != window_get_width() / global.view_width) {
 	scale = window_get_width() / global.view_width;
+	font_delete(fnt_win);
 	fnt_win = font_add(global.font, 36 * scale, false, false, 32, 128);
 }
 

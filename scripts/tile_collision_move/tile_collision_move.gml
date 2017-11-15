@@ -38,7 +38,7 @@ if (tilemap_get_at_pixel(tile_map_id, x, bbox_bottom - 1) <= 1) {
 
 	if (tile_collision_check_points(tile_map_id, left_side, center_side, right_side)) {
 		y = bbox_side & ~(TILE_SIZE - 1);	// Snaps player's y to the grid
-		if (velocity[1] > 0)				// Shifts player so side is at grid, not center
+		if (velocity[1] > 0)				// Shifts player so top/bottom is at grid, not center
 			y -= (bbox_bottom + 1) - y;
 		else
 			y += TILE_SIZE + y - bbox_top;

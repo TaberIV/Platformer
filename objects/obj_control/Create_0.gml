@@ -23,4 +23,5 @@ global.split_screen = NONE;
 
 // Style info
 global.font = "Fonts/Helvetica-Regular.ttf";
-scale = -1;
+scale = 1;
+fnt_win = font_add(global.font, 36 * scale, false, false, 32, 128);
