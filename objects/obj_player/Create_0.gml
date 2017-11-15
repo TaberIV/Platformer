@@ -30,6 +30,10 @@ var jumpWidth = 512;
 jumpSpeed = -2 * jumpHeight * sprintSpeed / (jumpWidth / 2);
 grav = 2 * jumpHeight * sqr(sprintSpeed) / sqr(jumpWidth / 2);
 fallGrav = false;
+
+doubleJump = false;
+doubleJumpCharge = doubleJump;
+doubleJumpSpeed = jumpSpeed * 0.75;
 #endregion
 
 #region Wall ride

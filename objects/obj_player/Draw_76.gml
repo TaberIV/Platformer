@@ -17,11 +17,17 @@ if (!wallRide) {
 	}
 	else {
 		#region Sets sprite when in air
-		image_index = (sprite_index == spr_jump) ? clamp(image_index, 1, 2) : 1;
-		sprite_index = spr_jump;
+		if (!doubleJump or (doubleJump and doubleJumpCharge)) {
+			image_index = (sprite_index == spr_jump) ? clamp(image_index, 1, 2) : 1;
+			sprite_index = spr_jump;
 		
-		if (velocity[1] >= 0)
-			image_index = 3;
+			if (velocity[1] >= 0)
+				image_index = 3;
+		} else {
+			image_index = (sprite_index == spr_jump || sprite_index == spr_jump_roll) ? 
+							clamp(image_index, 1, 8) : 1;
+			sprite_index = spr_jump_roll;
+		}
 		#endregion
 	}
 } else

@@ -31,11 +31,19 @@ grounded = (mid_grounded || tile_collision_check_points(tile_collisions_map_id,
 														[bbox_left, bbox_bottom + 1],
 														[bbox_right, bbox_bottom + 1])) && velocity[1] >= 0;
 
-
+doubleJumpCharge |= grounded and doubleJump;
 if (grounded && jumpPressed) {
-	velocity[1] = jumpSpeed;	
+	velocity[1] = jumpSpeed;
+	audio_play_sound(snd_jump, 1, false);
+} else if (jumpPressed and doubleJumpCharge and velocity[1] > doubleJumpSpeed and !wallRide) {
+	doubleJumpCharge = false;
+	
+	velocity[0] = (move_input[0] * 0.5 + (velocity[0] / max_velocityx) * 0.5) * max_velocityx;
+	velocity[1] = doubleJumpSpeed;
+	fallGrav = false;
 	audio_play_sound(snd_jump, 1, false);
 }
+
 if (velocity[1] < 0)
 	mid_grounded = false;
 #endregion
