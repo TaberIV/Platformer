@@ -6,6 +6,13 @@ gamepad_set_axis_deadzone(0, 0.3);
 dir = 0;
 forwardPressed = 0;
 
+/*#region States
+enum states {
+	normal,
+	wallRide
+}
+#endregion*/
+
 #region Movement
 control = true;
 
