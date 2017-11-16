@@ -6,12 +6,16 @@ gamepad_set_axis_deadzone(0, 0.3);
 dir = 0;
 forwardPressed = 0;
 
-/*#region States
+#region States
 enum states {
 	normal,
-	wallRide
+	wallRide,
+	noControl,
+	respawn
 }
-#endregion*/
+
+state = states.normal;
+#endregion
 
 #region Movement
 control = true;
@@ -38,9 +42,11 @@ jumpSpeed = -2 * jumpHeight * sprintSpeed / (jumpWidth / 2);
 grav = 2 * jumpHeight * sqr(sprintSpeed) / sqr(jumpWidth / 2);
 fallGrav = false;
 
-doubleJump = true;
+doubleJump = false;
 doubleJumpCharge = doubleJump;
 doubleJumpSpeed = jumpSpeed * 0.75;
+
+doubleJumpSprite = false;
 #endregion
 
 #region Wall ride
@@ -62,5 +68,5 @@ tile_hazard_map_id = layer_tilemap_get_id(layer_id);
 #endregion
 
 //Draw info
-draw_dir = 1;
+image_xscale = 1;
 draw_color = c_white;

@@ -1,5 +1,6 @@
-///@description Draws debug messages
+///@description Draws GUI
 
+#region Draw splitscreen
 if (scale != window_get_width() / global.view_width) {
 	scale = window_get_width() / global.view_width;
 	font_delete(fnt_win);
@@ -10,6 +11,7 @@ if (scale != window_get_width() / global.view_width) {
 
 if (play_room and !global.pause)
 	draw_splitscreen();
+#endregion
 
 #region Draw win text
 if (play_room and !global.pause and global.winner != -1) {

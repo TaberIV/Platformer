@@ -8,7 +8,7 @@ y = ystart;
 
 velocity = [0, 0];
 
-draw_dir = 1;
+image_xscale = 1;
 
 if (instance_exists(obj_coin))
 	obj_coin.collected[playerNum] = false;
