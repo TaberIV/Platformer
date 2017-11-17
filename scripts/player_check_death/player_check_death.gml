@@ -11,6 +11,6 @@ if (bbox_right <= 0 or bbox_left >= room_width or bbox_top >= room_height or
 	image_xscale = 1;
 	state = states.normal;
 
-	if (instance_exists(obj_coin))
-		obj_coin.collected[playerNum] = false;
+	doubleJump = false;
+	doubleJumpCharge = false;
 }

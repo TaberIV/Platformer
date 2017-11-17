@@ -1,4 +1,4 @@
-/// @descripton Checks if player is on a wall
+/// @descripton Checks if player is on a wall, returns true or false. If true, sets state to wallRide
 
 var on_left_wall = tile_collision_check_all_points(tile_collisions_map_id, 
 			[bbox_left - 1, bbox_bottom], 

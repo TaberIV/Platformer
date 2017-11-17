@@ -1,7 +1,7 @@
 /// @descsription Wall riding
 
 fallGrav = false;
-player_apply_gravity();
+velocity[1] += grav;
 
 //Sets velocity
 velocity[0] = 0;

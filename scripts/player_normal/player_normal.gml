@@ -26,7 +26,7 @@ if (velocity[1] < 0 and !jumpDown)
 	fallGrav = true;
 else if (velocity[1] >= 0 or grounded)
 	fallGrav = false;
-player_apply_gravity();
+velocity[1] += grav * (fallGrav ? 3 : 1);
 #endregion
 
 #region Jumping
@@ -63,4 +63,5 @@ player_move();
 #region Determine next state
 player_check_on_wall();
 player_check_finish();
+player_check_powerup();
 #endregion

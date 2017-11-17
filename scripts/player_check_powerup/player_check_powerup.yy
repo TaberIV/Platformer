@@ -1,8 +1,8 @@
 {
-    "id": "39cbf348-0aee-4c64-9c9c-10f37046ba13",
+    "id": "c597d5bb-0f3e-4532-b9cd-05d7c37c8c09",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "player_apply_gravity",
+    "name": "player_check_powerup",
     "IsCompatibility": false,
     "IsDnD": false
 }
