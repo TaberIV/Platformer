@@ -10,7 +10,7 @@ if (input_pause_pressed() and play_room and !instance_exists(obj_menu)) {
 if (play_room and !global.pause and global.winner != -1) {
 	var allDone = true;
 	for (var i = 0; i < global.num_players and allDone; i++)
-		allDone = (global.players[i].state == obj_player.states.noControl);
+		allDone = (global.players[i].state == obj_player.states.finished);
 	if (allDone and alarm[1] == -1)
 		alarm[1] = 30;
 }

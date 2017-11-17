@@ -10,8 +10,7 @@ forwardPressed = 0;
 enum states {
 	normal,
 	wallRide,
-	noControl,
-	respawn
+	finished
 }
 
 state = states.normal;

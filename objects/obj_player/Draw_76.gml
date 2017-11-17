@@ -1,6 +1,6 @@
 ///@description Set current sprite
 switch (state) {
-	case states.noControl:
+	case states.finished:
 	case states.normal:
 		//Turns character
 		image_xscale = (dir != 0) ? dir : image_xscale;

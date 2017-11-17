@@ -90,7 +90,7 @@
             "Key": "0bec0d33-4ad7-449d-8658-c35db75b7b9c",
             "Value": {
                 "id": "4f19499f-c62d-4fa0-be07-e9cab0fc1511",
-                "resourcePath": "scripts\\player_kill\\player_kill.yy",
+                "resourcePath": "scripts\\player_check_death\\player_check_death.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -194,7 +194,7 @@
             "Key": "242fbddd-bf73-4c6a-b16c-7793bb83ea26",
             "Value": {
                 "id": "deae37e5-7504-4d34-9209-efc9f55ddc5d",
-                "resourcePath": "scripts\\player_noControl\\player_noControl.yy",
+                "resourcePath": "scripts\\player_finished\\player_finished.yy",
                 "resourceType": "GMScript"
             }
         },
