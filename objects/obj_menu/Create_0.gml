@@ -19,7 +19,7 @@ screen_vcenter = screen_height / 2;
 
 // Sets menu type based on room
 if (room == rm_menu) {
-	menu_set_main()
+	menu_set_main();
 }
 else {
 	menu_set_pause();
