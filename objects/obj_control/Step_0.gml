@@ -15,6 +15,10 @@ if (play_room and !global.pause and global.winner != -1) {
 		alarm[1] = 30;
 }
 
+timer += delta_time / 1000000;
+debug_text = timer;
+alarm[0] = 10;
+
 #region Debug
 // Toggle debug
 if (keyboard_check_pressed(vk_f1)) {
@@ -30,6 +34,6 @@ for (var i = 0; i < 4; i++) {
 }
 
 // Reset room
-if (keyboard_check(ord("R")) or gamepad_button_check(0, gp_select))
+if (keyboard_check_pressed(ord("R")) or gamepad_button_check_pressed(0, gp_select))
 	room_restart();
 #endregion

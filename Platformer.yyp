@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "57f02836-a07d-46cb-b19c-ab9b728511b7",
+            "Value": {
+                "id": "6627d610-b08a-4f26-8c19-7c9e00a56c7d",
+                "resourcePath": "scripts\\menu_loop_toggle\\menu_loop_toggle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5a551f4a-c13b-418a-94d4-266649141328",
             "Value": {
                 "id": "51afe0d7-fbe8-48de-884e-e40f8ec77ee1",
@@ -1071,14 +1079,6 @@
             }
         },
         {
-            "Key": "c15f6a69-60d3-49ce-ab81-e9cc431037eb",
-            "Value": {
-                "id": "d7a66a8e-329b-4c40-ab24-a4f165a7a068",
-                "resourcePath": "scripts\\menu_set_playerSelect\\menu_set_playerSelect.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "c243b8bf-35df-46e8-b028-56a567aa0460",
             "Value": {
                 "id": "19a70c7e-c661-4d2d-b6ec-fbe88d3ac6c6",
@@ -1218,7 +1218,7 @@
             "Key": "dd87b634-957c-4d9f-9278-b4835cb6f47f",
             "Value": {
                 "id": "3e593e9c-d0e1-41ae-a06e-8cc17bc5595f",
-                "resourcePath": "scripts\\game_fullscreen_toggle\\game_fullscreen_toggle.yy",
+                "resourcePath": "scripts\\menu_fullscreen_toggle\\menu_fullscreen_toggle.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1460,15 +1460,15 @@
         "0cccb9cb-f74a-46e8-853e-94d332471a36",
         "e906efeb-bb04-4b8f-85e1-12d98467c2de",
         "aff305bb-7c08-4982-a5e3-51d275a6ef9a",
-        "c15f6a69-60d3-49ce-ab81-e9cc431037eb",
         "7f89f125-3afa-460f-8531-0ededdab45df",
         "7586434c-313e-42bb-b205-f657c26b6a9f",
         "92e0b1a5-7a09-4b4d-93de-3fc7543e8fdf",
         "ada4360d-945b-4161-8597-74cf2397f8fe",
+        "57f02836-a07d-46cb-b19c-ab9b728511b7",
+        "dd87b634-957c-4d9f-9278-b4835cb6f47f",
         "d2a0deb4-2e9a-4af3-becd-ce67ac81ffb5",
         "f7afc22f-098e-4458-97c5-7dcefb7aeb1e",
         "c128afd5-df0d-444d-b08a-7a3cf81e4191",
-        "dd87b634-957c-4d9f-9278-b4835cb6f47f",
         "edc2cca4-d3da-4d3a-9de5-1f8637e40b68",
         "02b23a94-62b9-4d28-b301-688dd95ca190",
         "1e5e6e6b-7372-47cf-bb63-6bb40016cc1c",

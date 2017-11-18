@@ -14,7 +14,6 @@ var high = !tile_collision_check_points(tile_collisions_map_id,
 if ((on_left_wall or on_right_wall) and high) {
 	state = states.wallRide;
 	image_xscale = (on_right_wall) ? -1 : 1;
-	doubleJumpSprite = false;
 	
 	return true;
 } else

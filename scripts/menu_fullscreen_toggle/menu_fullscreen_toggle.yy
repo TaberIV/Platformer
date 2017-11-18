@@ -1,8 +1,8 @@
 {
-    "id": "c15f6a69-60d3-49ce-ab81-e9cc431037eb",
+    "id": "dd87b634-957c-4d9f-9278-b4835cb6f47f",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "menu_set_playerSelect",
+    "name": "menu_fullscreen_toggle",
     "IsCompatibility": false,
     "IsDnD": false
 }

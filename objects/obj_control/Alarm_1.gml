@@ -1,3 +1,6 @@
 /// @description Moves to next level
 
-room_goto_next();
+if (global.loop) 
+	room_restart()
+else
+	room_goto_next();

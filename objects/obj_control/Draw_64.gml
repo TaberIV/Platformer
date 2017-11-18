@@ -16,7 +16,7 @@ if (play_room and !global.pause)
 #region Draw win text
 if (play_room and !global.pause and global.winner != -1) {
 	var str = "Player " + string(global.winner + 1) + " wins!";
-	
+	str = timer;
 	draw_set_font(fnt_win);
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_center);

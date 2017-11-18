@@ -16,6 +16,8 @@ switch (state) {
 			else if (abs(velocity[0]) == sprintSpeed)
 				sprite_index = spr_sprint;
 			#endregion
+			
+			doubleJumpSprite = false;
 		}
 		else {
 			#region Sets sprite when in air
@@ -43,6 +45,7 @@ switch (state) {
 
 	case states.wallRide:
 		sprite_index = spr_wall_ride;
+		doubleJumpSprite = false;
 		break;
 }
 	

@@ -5,6 +5,7 @@ global.debug = false;
 // Game Control
 play_room = false;
 global.pause = false;
+global.loop = false;
 
 // Player Control
 global.num_players = 1;
