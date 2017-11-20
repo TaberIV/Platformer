@@ -35,8 +35,6 @@ else
 player_move();
 
 #region Determine next state
-if (state == states.wallRide and !player_check_on_wall()) {
+if (state == states.wallRide and !player_check_on_wall())
 	state = states.normal;
-player_check_finish();
-}
 #endregion

@@ -35,14 +35,14 @@ grounded = (mid_grounded || tile_collision_check_points(tile_collisions_map_id,
 														[bbox_left, bbox_bottom + 1],
 														[bbox_right, bbox_bottom + 1])) && velocity[1] >= 0;
 
-doubleJumpCharge |= grounded and doubleJump;
 if (grounded && jumpPressed) {
 	velocity[1] = jumpSpeed;
 	audio_play_sound(snd_jump, 1, false);
 }
 
 #region Double Juump
-else if (jumpPressed and (doubleJumpCharge and velocity[1] > doubleJumpSpeed)) {
+doubleJumpCharge |= grounded and doubleJump;
+if (!grounded and jumpPressed and doubleJumpCharge and velocity[1] > doubleJumpSpeed) {
 	doubleJumpCharge = false;
 	
 	velocity[0] = (move_input[0] * 0.5 + (velocity[0] / max_velocityx) * 0.5) * max_velocityx;
@@ -61,7 +61,6 @@ if (velocity[1] < 0)
 player_move();
 
 #region Determine next state
-player_check_on_wall();
-player_check_finish();
-player_check_powerup();
+if (player_check_on_wall())
+	state = states.wallRide;
 #endregion

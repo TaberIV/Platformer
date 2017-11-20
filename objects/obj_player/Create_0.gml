@@ -17,8 +17,6 @@ state = states.normal;
 #endregion
 
 #region Movement
-control = true;
-
 velocity = [0, 0];
 velocityfloats = [0, 0];
 
@@ -65,6 +63,10 @@ tile_collisions_map_id = layer_tilemap_get_id(layer_id);
 layer_id = layer_get_id("tile_hazard");
 tile_hazard_map_id = layer_tilemap_get_id(layer_id);
 #endregion
+
+// Game
+coins_collected = 0;
+win_condition = true;
 
 //Draw info
 image_xscale = 1;

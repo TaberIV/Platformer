@@ -1087,14 +1087,6 @@
             }
         },
         {
-            "Key": "c597d5bb-0f3e-4532-b9cd-05d7c37c8c09",
-            "Value": {
-                "id": "7877e74c-d81f-4a5b-9e0a-70c62cbfdbc1",
-                "resourcePath": "scripts\\player_check_powerup\\player_check_powerup.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "c681b40c-dda8-4993-b105-35aa77e7c401",
             "Value": {
                 "id": "d1331dfb-5c91-44da-92a0-cf8ede000764",
@@ -1255,14 +1247,6 @@
             }
         },
         {
-            "Key": "e458582a-8769-49f8-a83b-1ccdb9ea94d1",
-            "Value": {
-                "id": "1c2edc86-4c8b-462d-81f9-434f31786c59",
-                "resourcePath": "scripts\\player_check_finish\\player_check_finish.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "e4ffb1a2-7a3a-426b-a49f-46472024c79d",
             "Value": {
                 "id": "fbff0488-51b1-4b75-a0e2-c505812bbd5c",
@@ -1306,7 +1290,7 @@
             "Key": "ea4a0de9-f48f-4300-8fe7-a02f560fe54e",
             "Value": {
                 "id": "433cf677-f9c1-4bfd-8879-53be407f39ed",
-                "resourcePath": "objects\\obj_powerup\\obj_powerup.yy",
+                "resourcePath": "objects\\obj_powerup_jump\\obj_powerup_jump.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1441,9 +1425,7 @@
         "0037dc75-fcc2-4012-ab76-3040131d3f9e",
         "06f2a7b4-1403-46fd-a0d2-afddb63f52ef",
         "242fbddd-bf73-4c6a-b16c-7793bb83ea26",
-        "e458582a-8769-49f8-a83b-1ccdb9ea94d1",
         "3fc7276a-90c1-4b16-a05b-348c133d551e",
-        "c597d5bb-0f3e-4532-b9cd-05d7c37c8c09",
         "0bec0d33-4ad7-449d-8658-c35db75b7b9c",
         "32692a77-da4c-4a0a-afc3-feab8cb8a502",
         "439e262b-2c0b-4916-aa56-492b9f3d6852",

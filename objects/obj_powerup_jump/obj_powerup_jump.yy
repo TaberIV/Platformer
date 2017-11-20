@@ -2,7 +2,7 @@
     "id": "ea4a0de9-f48f-4300-8fe7-a02f560fe54e",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_powerup",
+    "name": "obj_powerup_jump",
     "eventList": [
         
     ],
