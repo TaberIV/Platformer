@@ -16,5 +16,3 @@ if (play_room) {
 			game_camera_create(i, global.players[i]);
 	}
 }
-
-timer = 0;
