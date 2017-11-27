@@ -61,6 +61,8 @@ if (velocity[1] < 0)
 player_move();
 
 #region Determine next state
-if (player_check_on_wall())
+if (state == states.finished)
+	state = states.finished;
+else if (player_check_on_wall())
 	state = states.wallRide;
 #endregion

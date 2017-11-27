@@ -15,10 +15,6 @@ if (play_room and !global.pause and global.winner != -1) {
 		alarm[1] = 30;
 }
 
-timer += delta_time / 1000000;
-debug_text = timer;
-alarm[0] = 10;
-
 #region Debug
 // Toggle debug
 if (keyboard_check_pressed(vk_f1)) {

@@ -1,5 +1,5 @@
 /// @description Collect coins and powerups
-show_debug_message(other);
+
 if (!other.collected[playerNum]) {
 	other.collected[playerNum] = true;
 	var pickup_sound = snd_coin;
