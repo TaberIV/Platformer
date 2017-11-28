@@ -4,6 +4,7 @@ view_enabled = play_room;
 
 //If room is a level, creates a camera to follow player
 if (play_room) {
+	instance_create_layer(0, 0, "WorldObjects", obj_tutorial);
 	global.winner = -1;
 	
 	#region Sets split screen type
