@@ -1207,6 +1207,14 @@
             }
         },
         {
+            "Key": "d9b83606-b5aa-4eb0-86da-77fe139dbaf1",
+            "Value": {
+                "id": "1b72f2a4-de7e-4033-8e3f-a15bebcc08a9",
+                "resourcePath": "scripts\\highlight_camera_create\\highlight_camera_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "dd87b634-957c-4d9f-9278-b4835cb6f47f",
             "Value": {
                 "id": "3e593e9c-d0e1-41ae-a06e-8cc17bc5595f",
@@ -1460,7 +1468,8 @@
         "fb15424d-3454-4fa0-b122-dc63d7682ceb",
         "68b22332-1e70-4465-8e4e-40a663021f98",
         "8ad04b5d-7d83-4c1a-aef7-8eb0a8e2571b",
-        "ee5c35f9-de97-4793-b548-f966b9967564"
+        "ee5c35f9-de97-4793-b548-f966b9967564",
+        "d9b83606-b5aa-4eb0-86da-77fe139dbaf1"
     ],
     "tutorial": ""
 }
