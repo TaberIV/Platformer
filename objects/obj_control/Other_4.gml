@@ -34,4 +34,5 @@ if (play_room) {
 		highlight_camera_create();
 	}
 	#endregion
-}
+} else
+	global.split_screen = NONE;
