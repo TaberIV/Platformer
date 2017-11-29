@@ -1391,6 +1391,14 @@
             }
         },
         {
+            "Key": "f812815e-b536-4720-91f8-f13837d76ccb",
+            "Value": {
+                "id": "9f24d962-7bd7-4a72-97bc-68f4e39b1dc0",
+                "resourcePath": "scripts\\menu_tutorial_toggle\\menu_tutorial_toggle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fb15424d-3454-4fa0-b122-dc63d7682ceb",
             "Value": {
                 "id": "bca64aa4-00dc-41e2-8772-fa5e0c6cd71a",
@@ -1472,6 +1480,7 @@
         "ada4360d-945b-4161-8597-74cf2397f8fe",
         "57f02836-a07d-46cb-b19c-ab9b728511b7",
         "dd87b634-957c-4d9f-9278-b4835cb6f47f",
+        "f812815e-b536-4720-91f8-f13837d76ccb",
         "d2a0deb4-2e9a-4af3-becd-ce67ac81ffb5",
         "f7afc22f-098e-4458-97c5-7dcefb7aeb1e",
         "c128afd5-df0d-444d-b08a-7a3cf81e4191",
