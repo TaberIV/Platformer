@@ -5,5 +5,6 @@ menu_set_layout(100, 100, c_white, fa_left, fa_top,
 
 var fullString = "Fullscreen: " + (window_get_fullscreen() ? "On" : "Off");
 var loopString = "Level loop: " + (global.loop ? "On" : "Off");
-menu_set_contents("Settings:", ["Back", fullString, loopString], 
-	[menu_back, menu_fullscreen_toggle, menu_loop_toggle]);
+var tutString = "Tutorial: " + (global.tutorial ? "On" : "Off");
+menu_set_contents("Settings:", ["Back", fullString, loopString, tutString], 
+	[menu_back, menu_fullscreen_toggle, menu_loop_toggle, menu_tutorial_toggle]);
