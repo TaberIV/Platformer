@@ -12,5 +12,8 @@ if (playerNum == global.keyboardPlayer) {
 	sprintDown |= keyboard_check(vk_shift);
 	jumpDown |= keyboard_check(vk_space);
 	jumpPressed |= keyboard_check_pressed(vk_space);
+	
+	if (keyboard_check_pressed(vk_control))
+		state = 7;
 }
 #endregion
