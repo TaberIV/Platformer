@@ -10,6 +10,4 @@ switch (state) {
 	case states.wallRide:
 		player_wallRide();
 		break;
-	default:
-		show_debug_message("Unknown state");
 }
