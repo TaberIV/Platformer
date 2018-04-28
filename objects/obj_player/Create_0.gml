@@ -2,7 +2,7 @@
 playerNum = -1;
 
 //Controls
-gamepad_set_axis_deadzone(0, 0.3);
+gamepad_set_axis_deadzone(0, 0.7);
 dir = 0;
 forwardPressed = 0;
 

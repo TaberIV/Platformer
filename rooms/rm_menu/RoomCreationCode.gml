@@ -1,0 +1,1 @@
+global.playerTimers = [0, 0, 0, 0];
