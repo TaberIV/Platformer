@@ -14,6 +14,7 @@ global.players = [];
 global.draw_colors = [c_red, c_blue, c_yellow, c_green];
 global.keyboardPlayer = global.num_players - 1;
 global.winner = -1;
+global.playerTimers = [0, 0, 0, 0];
 
 // View info
 global.view_width = 960;

@@ -33,6 +33,20 @@ if (play_room) {
 	if (global.num_players == 3 and global.split_screen == QUADRANT) {
 		highlight_camera_create();
 	}
+	
+	
 	#endregion
-} else
+} else {
 	global.split_screen = NONE;
+	
+	if (room == rm_end) {
+		var winTime = -1;
+		
+		for (var i = 0; i < global.num_players; i++) {
+			if (global.playerTimers[i] < winTime || winTime < 0) {
+				global.winner = i;
+				winTime = global.playerTimers[i];
+			}
+		}
+	}
+}

@@ -66,7 +66,7 @@ tile_hazard_map_id = layer_tilemap_get_id(layer_id);
 
 // Game
 coins_collected = 0;
-win_condition = true;
+win_condition = instance_exists(obj_coin) ? false : true;
 
 //Draw info
 image_xscale = 1;

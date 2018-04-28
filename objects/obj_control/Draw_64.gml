@@ -10,6 +10,9 @@ if (scale != window_get_width() / global.view_width) {
 
 if (play_room and !global.pause)
 	draw_splitscreen();
+else if (room == rm_end) {
+	drawWinner();
+}
 
 #region Draws debug text
 if (alarm[0] > 0) {

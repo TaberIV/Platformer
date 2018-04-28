@@ -11,3 +11,7 @@ switch (state) {
 		player_wallRide();
 		break;
 }
+
+
+if (state != states.finished)
+	global.playerTimers[playerNum]++;

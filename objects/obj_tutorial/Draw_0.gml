@@ -31,8 +31,10 @@ if (global.tutorial and view_current < global.num_players) {
 			draw_text(room_width / 2, room_height / 3, "X or RT to sprint,\nHold A to jump further.");
 			break;
 		case rm_level3:
-			draw_text(room_width / 8, room_height / 4, "Some levels have\nmultiple routes.");
-			draw_text(room_width / 5, room_height * 0.9, "That is a power-up,\nbut getting it is tricky.")
+			draw_text(room_width / 6, room_height / 4, "In levels with coins you\nneed at least one to finish.");
+			draw_text(room_width / 5, room_height * 0.9, "This is a power-up,\nbut getting it is tricky.")
 			break;
+		case rm_level4:
+			draw_text(864, 256, "Slow\nDown")
 	}
 }

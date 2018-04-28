@@ -1,9 +1,10 @@
 /// @description Draw view dividers
 
-if (global.num_players > 1) {
-	var gui_width = display_get_gui_width();
-	var gui_height = display_get_gui_height();
-	
+var gui_width = display_get_gui_width();
+var gui_height = display_get_gui_height();
+var text_offset = 8 * scale;
+
+if (global.split_screen != NONE) {
 	#region Divider lines
 	draw_set_color(c_black);
 	var line_width = 1.5 * scale;
@@ -18,12 +19,9 @@ if (global.num_players > 1) {
 	}
 	#endregion
 	
-	#region Window labels
+	#region Window labels	
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
-	draw_set_font(obj_control.fnt_player_labels);
-	
-	var text_offset = 8 * scale;
 	
 	if (global.split_screen != NONE) {
 		for (var i = 0; i < global.num_players; i++) {
@@ -35,8 +33,14 @@ if (global.num_players > 1) {
 				var text_y = (gui_height / 2) * (i % 2) + text_offset;
 			}
 			
+			draw_set_font(obj_control.fnt_player_labels);
 			draw_set_color(global.draw_colors[i]);
 			draw_text(text_x, text_y, "P" + string(i + 1));
+			
+			// Draw timers
+			draw_set_font(fnt_timer);
+			draw_set_color(c_white);
+			draw_text(text_x, text_y + 50, getTimerString(global.playerTimers[i]));
 		}
 	}
 	#endregion
@@ -70,4 +74,31 @@ if (global.num_players > 1) {
 		}
 	}
 	#endregion
+} else {
+	draw_set_font(fnt_timer);
+	draw_set_color(c_white);
+	
+	var text_x;
+	var text_y;
+	
+	for (var i = 0; i < global.num_players; i++) {
+		if (i % 2 == 0) {
+			draw_set_halign(fa_left);
+			text_x = text_offset;
+		} else {
+			draw_set_halign(fa_right);
+			text_x = gui_width - text_offset;
+		}
+		
+		if (floor(i / 2) == 0) {
+			draw_set_valign(fa_top);
+			text_y = text_offset;
+		} else {
+			draw_set_valign(fa_bottom);
+			text_y = gui_height - text_offset;
+		}		
+		
+		
+		draw_text(text_x, text_y, getTimerString(global.playerTimers[i]));
+	}
 }

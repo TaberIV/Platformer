@@ -8,6 +8,7 @@ if (!other.collected[playerNum]) {
 		case obj_coin:
 			coins_collected += 1;
 			pickup_sound = snd_coin;
+			win_condition = true;
 			break;
 		case obj_powerup_jump:
 			doubleJump = true;
